@@ -1,16 +1,17 @@
-package project01.meshup.controllers;
+package guru.springframework.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * Created by jt on 1/20/16.
+ */
 @Controller
-public class indexController {
+public class IndexController {
 
     @RequestMapping("/")
-
     public String getIndex(){
-        return "index";   // thymeleave template is going to find a file called index.html in the templates folder
 
+        return "index";
     }
 }

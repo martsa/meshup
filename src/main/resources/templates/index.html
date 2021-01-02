@@ -142,19 +142,39 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Spring Framework Guru Courses</h1>
+            <h1 th:text="#{index.courses.headline}">Courses Headline</h1>
         </div>
     </div>
 
-    <div class="row course-list list">
+<!--
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.courseName}"></td>
+
+
+
+
+        </tr>
+    </table>
+-->
+
+
+
+
+    <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a href="product">
+
+                    <a href="product/1">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
-                                     src="../static/images/SpringIntroThumb.png"
                                      th:src="@{images/SpringIntroThumb.png}"
                                      class="course-box-image"/>
                             </div>
@@ -188,7 +208,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product">
+                    <a data-role="course-box-link" href="product/2">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -226,7 +246,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product/3">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -263,16 +283,16 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product/4">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
                                      src="../static/images/SpringCoreDevOpsThumb.png"
-                                     th:src="@{images/SpringCoreDevOpsThumb.png}"
+                                     th:src="@{/images/SpringCoreDevOpsThumb.png}"
                                      class="course-box-image"/>
                             </div>
                             <div class="course-listing-title">

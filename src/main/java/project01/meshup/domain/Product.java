@@ -17,7 +17,7 @@ public class Product {
     private Author author;
     private BigDecimal price;
     @OneToMany(targetEntity = ProductCategory.class,cascade = CascadeType.ALL)
-    @JoinColumn(name="product_fk",referencedColumnName = "id")
+  //  @JoinColumn(name="product_fk",referencedColumnName = "id")
     private List<ProductCategory> productCategories=new ArrayList<>();
     private String imageUrl;
 
